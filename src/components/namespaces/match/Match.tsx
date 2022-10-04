@@ -16,6 +16,9 @@ export namespace Match {
     const ref: any = useRef(null);
     const state = useState(globalState);
 
+    useEffect(() => {
+      ref.current ? state.sizes.set(ref.current.offsetWidth) : 0;
+    }, [state.tab.get()]);
 
     const selectTab = (id: number) => {
       state.tab.set(id);

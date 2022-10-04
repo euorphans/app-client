@@ -172,7 +172,6 @@ export namespace Player {
           <div className={style.cover}>
             <div className={style.coverImageButtonWrapper}>
               <div className={style.imageButton}>
-                  {user.name === username ? (
                 <div className={style.buttonWrapper}>
                   {user.name == username ? (
                     <Button
@@ -180,7 +179,7 @@ export namespace Player {
                       Изменить обложку
                     </Button>
                   ) : null}
-                </div>) : <></>}
+                </div>
                 <div className={style.imageWrapper}>
                   <img
                     src={`https://api.dangerzone.su/user/banner/${username}?t=${Date.now()}`}
@@ -535,6 +534,10 @@ export namespace Player {
   export const Body = () => {
     const ref: any = useRef(null);
     const state = useState(globalState);
+
+    useEffect(() => {
+      ref.current ? state.sizes.set(ref.current.offsetWidth) : 0;
+    }, [state.tab.get()]);
 
     const selectTab = (id: number) => {
       state.tab.set(id);

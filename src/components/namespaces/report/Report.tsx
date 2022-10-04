@@ -1,9 +1,8 @@
-import React, { createRef, FC, useEffect, useLayoutEffect, useRef } from 'react';
+import React, { FC, useEffect, useRef } from 'react';
 import style from './Report.module.scss';
 import { Tab, TabList, Tabs } from 'react-tabs';
 import { Button } from '../../ui/button/Button';
 import WardenImage from '../../../static/images/warden.png';
-import { useTypedSelector } from '../../../hooks/useTypedSelector';
 
 export namespace Report {
   export const TabWrapper: FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -77,7 +76,7 @@ export namespace Report {
 
   export const Warden: FC<{ username: string }> = ({ username }) => {
     return (
-      <div className={style.body}>
+      <div className={style.main}>
         <div className={style.warden}>
           <img
             style={{ width: '750.22px', height: '422px', userSelect: 'none' }}
@@ -95,9 +94,67 @@ export namespace Report {
             </span>
           </div>
           <Button
-            styles={{ color: 'var(--black100)', background: 'var(--white100)', height: '46px' }}>
+            styles={{
+              color: 'var(--black100)',
+              background: 'var(--white100)',
+              height: '46px',
+              fontSize: 'var(--fontSizes-1)'
+            }}>
             Начать использование
           </Button>
+        </div>
+      </div>
+    );
+  };
+
+  export const Report = () => {
+    const list = [
+      {
+        number: 1,
+        title: 'Напиши в чате майнкрафта: "/report [никнейм]"'
+      },
+      {
+        number: 2,
+        title: 'Выбери тип репорта (читы или чат) в появившемся инвентаре'
+      },
+      {
+        number: 3,
+        title: 'Подтверди жалобу с помощью кликом по лаймовому красителю'
+      }
+    ];
+
+    return (
+      <div className={style.report}>
+        <div className={style.head}>
+          <h1 className={style.title}>Как мне пожаловаться на игрока?</h1>
+          <span className={style.description}>
+            Если ты думаешь, что игрок нарушает правила сервера, тогда ты можешь пожаловаться на
+            него следующим образом:
+          </span>
+        </div>
+        <div className={style.body}>
+          {list.map((item, key) => {
+            return (
+              <div className={style.item} key={key}>
+                <div className={style.number}>{item.number}</div>
+                <span className={style.title}>{item.title}</span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  };
+
+  export const Appeal = () => {
+    return (
+      <div className={style.appeal}>
+        <div className={style.head}>
+          <h1 className={style.title}>Апелляции</h1>
+          <span className={style.description}>
+            Если ты думаешь, что игрок нарушает правила сервера, тогда ты можешь пожаловаться на
+            него следующим образом:
+          </span>
         </div>
       </div>
     );

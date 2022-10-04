@@ -31,9 +31,10 @@ export namespace Subscription {
     return (
       <>
         <div className={style.head}>
-          <h1 className={style.title}>Платные подписки Danger Zone</h1>
+          <h1 className={style.title}>Платные подписки</h1>
           <span className={style.description}>
-            Получите новые впечатления от игры на нашем сайте с временной подпиской
+            Получите новые впечатления от игры и уникальные функции на нашем сайте с временной
+            подпиской
           </span>
         </div>
       </>
@@ -120,7 +121,31 @@ export namespace Subscription {
 
     const openModal = (current: number) => {
       if (!isAuth) {
-        toast.error('Для этого действия необходимо войти в аккаунт', errorToast);
+        toast.error(
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 'var(--space-1)'
+            }}>
+            <span
+              style={{
+                color: 'var(--white100)',
+                fontWeight: 'var(--fontWeights-semibold)'
+              }}>
+              Ошибка
+            </span>
+            <span
+              style={{
+                color: 'var(--white60)',
+                fontWeight: 'var(--fontWeights-medium)',
+                fontSize: 'var(--fontSizes-0)'
+              }}>
+              Для этого действия необходимо войти в аккаунт
+            </span>
+          </div>,
+          errorToast
+        );
         return;
       }
 
@@ -132,7 +157,31 @@ export namespace Subscription {
 
     const charge = () => {
       if (!isAuth) {
-        toast.error('Для этого действия необходимо войти в аккаунт', errorToast);
+        toast.error(
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 'var(--space-1)'
+            }}>
+            <span
+              style={{
+                color: 'var(--white100)',
+                fontWeight: 'var(--fontWeights-semibold)'
+              }}>
+              Ошибка
+            </span>
+            <span
+              style={{
+                color: 'var(--white60)',
+                fontWeight: 'var(--fontWeights-medium)',
+                fontSize: 'var(--fontSizes-0)'
+              }}>
+              Для этого действия необходимо войти в аккаунт
+            </span>
+          </div>,
+          errorToast
+        );
         return;
       }
 
