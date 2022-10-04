@@ -13,6 +13,7 @@ import { RankingsPage } from '../pages/RankingsPage';
 import { PersonalPage } from '../pages/PersonalPage';
 import { Forbidden } from '../pages/Forbidden';
 import { ReportPage } from '../pages/ReportPage';
+import { BrandBookPage } from '../pages/BrandBookPage';
 
 export interface PrivacyRequirements {
   authRequire: boolean;
@@ -38,6 +39,7 @@ export enum RoutesEnum {
   RANKINGS_PAGE = '/rankings',
   PERSONAL_PAGE = '/personal',
   REPORT_PAGE = '/warden',
+  BRANDBOOK_PAGE = '/brandbook',
   NOTFOUND_PAGE = '*'
 }
 
@@ -52,6 +54,7 @@ export const routes: Array<IRoute> = [
   { path: RoutesEnum.MATCH_PAGE, element: <MatchPage />, privacy: setPrivacy(false, null) },
   { path: RoutesEnum.PLAY_PAGE, element: <PlayPage />, privacy: setPrivacy(false, null) },
   { path: RoutesEnum.REPORT_PAGE, element: <ReportPage />, privacy: setPrivacy(true, null) },
+  { path: RoutesEnum.BRANDBOOK_PAGE, element: <BrandBookPage />, privacy: setPrivacy(false, null) },
   {
     path: RoutesEnum.SUBSCRIPTION_PAGE,
     element: <SubscriptionPage />,

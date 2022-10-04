@@ -26,7 +26,7 @@ export const Footer: FC<FooterI> = ({ topPeace }) => {
                 width={'47px'}
                 height={'51px'}
                 type={'white'}
-                customStyles={{ justifyContent: 'center' }}
+                styles={{ justifyContent: 'center' }}
               />
             </div>
             <div className={style.item}>

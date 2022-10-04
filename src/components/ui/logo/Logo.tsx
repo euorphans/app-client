@@ -5,15 +5,15 @@ import { Link } from 'react-router-dom';
 import { LogoIcon } from '../../icons/Icons';
 
 interface LogoI {
-  customStyles?: any;
+  styles?: any;
   type?: string;
   width?: string;
   height?: string;
 }
 
-export const Logo: FC<LogoI> = ({ customStyles, type, width, height }) => {
+export const Logo: FC<LogoI> = ({ styles, type, width, height }) => {
   return (
-    <Link className={style.logo} style={{ ...customStyles, width: width, height: height }} to={'/'}>
+    <Link className={style.logo} style={{ ...styles, width: width, height: height }} to={'/'}>
       <LogoIcon width={width} height={height} />
     </Link>
   );
