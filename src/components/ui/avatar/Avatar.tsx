@@ -1,24 +1,20 @@
 import style from './Avatar.module.scss';
 import React, { FC, useEffect } from 'react';
 import { StarIcon } from '../../icons/Icons';
-import { useTypedSelector } from '../../../hooks/useTypedSelector';
-import { UserInterface } from '../../../models/interfaces/User.interface';
 import { config } from '../../../config';
 import axios, { AxiosResponse } from 'axios';
-import { RoleInterface } from '../../../models/interfaces/Role.interface';
 import { SortRoles } from '../../../utils/SortRoles';
-import { createState, useState } from '@hookstate/core';
 import { ComponentInterface } from '../../../models/interfaces/Component.interface';
 
-interface AvatarI extends ComponentInterface {
+interface Avatar extends ComponentInterface {
   username: string | undefined;
   data?: any;
   size?: number;
-  heightPremium?: string;
-  widthPremium?: string;
+  heightPremium?: number;
+  widthPremium?: number;
 }
 
-export const Avatar: FC<AvatarI> = ({
+export const Avatar: FC<Avatar> = ({
   username,
   size,
   styles,

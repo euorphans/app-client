@@ -1,17 +1,15 @@
 import React, { FC } from 'react';
-// @ts-ignore
 import style from './Logo.module.scss';
 import { Link } from 'react-router-dom';
 import { LogoIcon } from '../../icons/Icons';
 
-interface LogoI {
+interface Logo {
   styles?: any;
-  type?: string;
-  width?: string;
-  height?: string;
+  width?: number;
+  height?: number;
 }
 
-export const Logo: FC<LogoI> = ({ styles, type, width, height }) => {
+export const Logo: FC<Logo> = ({ styles, width, height }) => {
   return (
     <Link className={style.logo} style={{ ...styles, width: width, height: height }} to={'/'}>
       <LogoIcon width={width} height={height} />

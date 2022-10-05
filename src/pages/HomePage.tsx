@@ -27,7 +27,7 @@ export const HomePage: FC = () => {
           выходящая за рамки всего возможного
         </Home.HeadingTitle>
         <Input
-          icon={{ position: 'left', item: <SearchIcon height={'24px'} width={'24px'} /> }}
+          icon={{ position: 'left', item: <SearchIcon height={24} width={24} /> }}
           placeholder={'Поиск по сайту..'}
           className={style.hiddenInput}
           styles={{ padding: '0px 14px', height: '50px', width: '470px' }}

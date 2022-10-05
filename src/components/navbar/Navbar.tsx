@@ -1,15 +1,13 @@
-// @ts-ignore
 import style from './Navbar.module.scss';
 import React, { FC, useLayoutEffect, useState } from 'react';
 import { Button } from '../ui/button/Button';
 import { Avatar } from '../ui/avatar/Avatar';
 import { Logo } from '../ui/logo/Logo';
 import { Sidebar } from '../sidebar/Sidebar';
-import { ItemsT, NotifySidebar, ProfileItems } from '../../utils/Items';
+import { Items, NotifySidebar, ProfileItems } from '../../utils/Items';
 import { CloseIcon, LightIcon, SearchIcon } from '../icons/Icons';
 import { Container } from '../ui/container/Container';
 import { Modal } from '../modal/Modal';
-// @ts-ignore
 import modalStyle from '../modal/Modal.module.scss';
 import { useActions } from '../../hooks/useActions';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
@@ -19,26 +17,26 @@ import { Input } from '../ui/input/Input';
 import { AnimatePresence } from 'framer-motion';
 import disableScroll from 'disable-scroll';
 
-interface NavbarInterface {
+interface Navbar {
   items: {
     settings: { header: { show: boolean; content: React.CElement<any, any> } };
-    items: ItemsT;
-    additionalItems?: { show: boolean; items: ItemsT };
-    footerItems?: { show: boolean; items: ItemsT };
+    items: Items;
+    additionalItems?: { show: boolean; items: Items };
+    footerItems?: { show: boolean; items: Items };
   };
 }
 
-interface NavbarModalInterface {
+interface NavbarModal {
   state: { value: boolean; setHandler: React.Dispatch<any> };
   token: { value: string; setHandler: React.Dispatch<any> };
   handlers: Array<any>;
 }
 
-interface NotificationButtonInterface {
+interface NotificationButton {
   handlers: Array<any>;
 }
 
-const NavbarModal: FC<NavbarModalInterface> = ({ state, handlers, token }) => {
+const NavbarModal: FC<NavbarModal> = ({ state, handlers, token }) => {
   return (
     <Modal.BackDrop state={state.value} setState={state.setHandler}>
       <Modal.Wrapper setState={state.setHandler}>
@@ -85,7 +83,7 @@ const NavbarModal: FC<NavbarModalInterface> = ({ state, handlers, token }) => {
   );
 };
 
-const NotificationButton: FC<NotificationButtonInterface> = ({ handlers }) => {
+const NotificationButton: FC<NotificationButton> = ({ handlers }) => {
   return (
     <Button styles={{ padding: 0, height: '40px', width: '40px' }} onClick={handlers[0]}>
       <div
@@ -108,12 +106,12 @@ const NotificationButton: FC<NotificationButtonInterface> = ({ handlers }) => {
         }}>
         <span style={{ padding: '0px 6px', maxWidth: 20 }}>9+</span>
       </div>
-      <LightIcon width={'24px'} height={'24px'} />
+      <LightIcon width={24} height={24} />
     </Button>
   );
 };
 
-export const Navbar: FC<NavbarInterface> = ({ items }) => {
+export const Navbar: FC<Navbar> = ({ items }) => {
   const { isAuth, user, error } = useTypedSelector((state) => state.auth);
   const { login, logout } = useActions();
   const location = useLocation();
@@ -186,18 +184,22 @@ export const Navbar: FC<NavbarInterface> = ({ items }) => {
                     backgroundColor: 'var(--black04)'
                   }}
                   onClick={() => setIsOpenSearch(false)}>
-                  <CloseIcon width={'24px'} height={'24px'} />
+                  <CloseIcon width={24} height={24} />
                 </Button>
               </div>
             )}
 
             {!isOpenSearch && (
               <div className={style.header}>
-                <Logo width={'38px'} height={'42px'} type={'white'} />
+                <Logo width={35.7} height={42} />
                 {location.pathname !== '/' && (
                   <Input
                     placeholder={'Поиск по сайту..'}
-                    styles={{ left: '106px', minWidth: '470px', height: '46px' }}
+                    styles={{
+                      left: '106px',
+                      minWidth: '470px',
+                      height: '46px'
+                    }}
                     options={{ useFocus: true }}
                     icon={{ position: 'left', item: <SearchIcon /> }}
                     className={style.hiddenInput}
@@ -216,13 +218,17 @@ export const Navbar: FC<NavbarInterface> = ({ items }) => {
                       <Button onClick={toPlay}>Играть</Button>
                       <NotificationButton handlers={[() => openSidebar(NotifySidebar)]} />
                       <Button
-                        styles={{ border: 'none', outline: 'none', padding: '0' }}
+                        styles={{
+                          border: 'none',
+                          outline: 'none',
+                          padding: '0'
+                        }}
                         onClick={() => openSidebar(ProfileItems(user, logout))}>
                         <Avatar
                           username={user.name}
                           styles={{ height: '40px', width: '40px' }}
-                          widthPremium={'14px'}
-                          heightPremium={'14px'}
+                          widthPremium={14}
+                          heightPremium={14}
                         />
                       </Button>
                     </>

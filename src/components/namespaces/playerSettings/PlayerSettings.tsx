@@ -169,7 +169,7 @@ export namespace PlayerSettings {
                             {/*  name={'file'}*/}
                             {/*  onChange={(e) => selectFile(e)}*/}
                             {/*/>*/}
-                            <AddImageIcon width={'18px'} height={'18px'} />
+                            <AddImageIcon width={18} height={18} />
                           </div>
                         </div>
                       </div>
@@ -178,8 +178,8 @@ export namespace PlayerSettings {
                       <div className={style.avatar}>
                         <Avatar
                           username={user.name}
-                          widthPremium={'30px'}
-                          heightPremium={'30px'}
+                          widthPremium={30}
+                          heightPremium={30}
                           styles={{ width: '123px', height: '123px', margin: '-5px' }}
                         />
                       </div>
@@ -222,7 +222,7 @@ export namespace PlayerSettings {
                                 styles={{ height: '46px' }}
                                 icon={{
                                   position: 'left',
-                                  item: <DiscordIcon width={'18px'} height={'18px'} />
+                                  item: <DiscordIcon width={18} height={18} />
                                 }}
                                 placeholder={'Тег'}
                               />
@@ -250,7 +250,7 @@ export namespace PlayerSettings {
                               styles={{ height: '46px' }}
                               icon={{
                                 position: 'left',
-                                item: <VkIcon width={'18px'} height={'18px'} />
+                                item: <VkIcon width={18} height={18} />
                               }}
                               placeholder={'https://vk.com/'}
                             />
@@ -262,7 +262,7 @@ export namespace PlayerSettings {
                               styles={{ height: '46px' }}
                               icon={{
                                 position: 'left',
-                                item: <YouTubeIcon width={'18px'} height={'18px'} />
+                                item: <YouTubeIcon width={18} height={18} />
                               }}
                               placeholder={'https://youtube.com/'}
                             />

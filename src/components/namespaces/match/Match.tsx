@@ -1,10 +1,10 @@
 // @ts-ignore
-import style from "./Match.module.scss";
-import { Button } from "../../ui/button/Button";
-import { Avatar } from "../../ui/avatar/Avatar";
-import { Tab, TabList, Tabs } from "react-tabs";
-import { createState, useState } from "@hookstate/core";
-import React, { useEffect, useRef } from "react";
+import style from './Match.module.scss';
+import { Button } from '../../ui/button/Button';
+import { Avatar } from '../../ui/avatar/Avatar';
+import { Tab, TabList, Tabs } from 'react-tabs';
+import { createState, useState } from '@hookstate/core';
+import React, { useEffect, useRef } from 'react';
 
 export namespace Match {
   const globalState = createState({
@@ -22,7 +22,7 @@ export namespace Match {
 
     return (
       <>
-        <Tabs style={{ gap: "var(--space-6)", display: "flex", flexDirection: "column" }}>
+        <Tabs style={{ gap: 'var(--space-6)', display: 'flex', flexDirection: 'column' }}>
           <TabList style={{ margin: 0, padding: 0 }}>
             <div className={style.tabs}>
               <div
@@ -30,17 +30,17 @@ export namespace Match {
                 style={{
                   transform:
                     state.tab.get() === 1
-                      ? "translateX(0px)"
+                      ? 'translateX(0px)'
                       : state.tab.get() === 2
-                        ? "translateX(63px)"
-                        : "translateX(170px)",
+                      ? 'translateX(63px)'
+                      : 'translateX(170px)',
                   width: state.sizes.get()
                 }}></div>
               <Tab>
                 <button
                   onClick={() => selectTab(1)}
                   ref={state.tab.get() === 1 ? ref : null}
-                  style={{ color: state.tab.get() === 1 ? "var(--black100)" : "var(--black60)" }}
+                  style={{ color: state.tab.get() === 1 ? 'var(--black100)' : 'var(--black60)' }}
                   className={style.tab}>
                   Матч
                 </button>
@@ -49,7 +49,7 @@ export namespace Match {
                 <button
                   onClick={() => selectTab(2)}
                   ref={state.tab.get() === 2 ? ref : null}
-                  style={{ color: state.tab.get() === 2 ? "var(--black100)" : "var(--black60)" }}
+                  style={{ color: state.tab.get() === 2 ? 'var(--black100)' : 'var(--black60)' }}
                   className={style.tab}>
                   Статистика
                 </button>
@@ -58,7 +58,7 @@ export namespace Match {
                 <button
                   onClick={() => selectTab(3)}
                   ref={state.tab.get() === 3 ? ref : null}
-                  style={{ color: state.tab.get() === 3 ? "var(--black100)" : "var(--black60)" }}
+                  style={{ color: state.tab.get() === 3 ? 'var(--black100)' : 'var(--black60)' }}
                   className={style.tab}>
                   Настройки
                 </button>
@@ -71,10 +71,10 @@ export namespace Match {
             <span className={style.titleTeam}>team_orphans</span>
             <button className={style.avatarButton}>
               <Avatar
-                widthPremium={"14px"}
-                heightPremium={"14px"}
-                username={"Orphans"}
-                styles={{ width: "40px", height: "40px" }}
+                widthPremium={14}
+                heightPremium={14}
+                username={'Orphans'}
+                styles={{ width: '40px', height: '40px' }}
               />
             </button>
           </div>
@@ -86,10 +86,10 @@ export namespace Match {
           <div className={style.item}>
             <button className={style.avatarButton}>
               <Avatar
-                widthPremium={"14px"}
-                heightPremium={"14px"}
-                username={"Jassix"}
-                styles={{ width: "40px", height: "40px" }}
+                widthPremium={14}
+                heightPremium={14}
+                username={'Jassix'}
+                styles={{ width: '40px', height: '40px' }}
               />
             </button>
             <span className={style.titleTeam}>team_jassix</span>
@@ -101,7 +101,7 @@ export namespace Match {
   export const Body = () => {
     const team = [
       {
-        username: "Orphans",
+        username: 'Orphans',
         kills: 32,
         deaths: 23,
         kd: 3.18,
@@ -109,7 +109,7 @@ export namespace Match {
         evp: true
       },
       {
-        username: "wassty",
+        username: 'wassty',
         kills: 32,
         deaths: 23,
         kd: 3.18,
@@ -117,7 +117,7 @@ export namespace Match {
         evp: false
       },
       {
-        username: "Jassix",
+        username: 'Jassix',
         kills: 32,
         deaths: 23,
         kd: 3.18,
@@ -125,7 +125,7 @@ export namespace Match {
         evp: false
       },
       {
-        username: "Erelima",
+        username: 'Erelima',
         kills: 32,
         deaths: 23,
         kd: 3.18,
@@ -142,10 +142,10 @@ export namespace Match {
               <div className={style.defaultInfo}>
                 <button className={style.avatarButton}>
                   <Avatar
-                    widthPremium={"14px"}
-                    heightPremium={"14px"}
-                    username={"Orphans"}
-                    styles={{ width: "40px", height: "40px" }}
+                    widthPremium={14}
+                    heightPremium={14}
+                    username={'Orphans'}
+                    styles={{ width: '40px', height: '40px' }}
                   />
                 </button>
                 <span className={style.username}>Orphans</span>
@@ -181,10 +181,10 @@ export namespace Match {
               <div className={style.defaultInfo}>
                 <button className={style.avatarButton}>
                   <Avatar
-                    widthPremium={"14px"}
-                    heightPremium={"14px"}
-                    username={"_d4ckiller"}
-                    styles={{ width: "40px", height: "40px" }}
+                    widthPremium={14}
+                    heightPremium={14}
+                    username={'_d4ckiller'}
+                    styles={{ width: '40px', height: '40px' }}
                   />
                 </button>
                 <span className={style.username}>_d4ckiller</span>
@@ -223,13 +223,13 @@ export namespace Match {
               <span className={style.timer}>03:12</span>
             </div>
             <div className={style.itemStageBody}>
-              <div style={{ display: "none" }} className={style.maps}>
+              <div style={{ display: 'none' }} className={style.maps}>
                 <div className={style.map}>
                   <div className={style.info}>
                     <img src="https://i.imgur.com/rWVJi6C.png" alt="" />
                     <span className={style.name}>Фортис</span>
                   </div>
-                  <Button styles={{ backgroundColor: "var(--black100)", color: "var(--white100)" }}>
+                  <Button styles={{ backgroundColor: 'var(--black100)', color: 'var(--white100)' }}>
                     Бан
                   </Button>
                 </div>
@@ -238,7 +238,7 @@ export namespace Match {
                     <img src="https://i.imgur.com/kTafZFs.png" alt="" />
                     <span className={style.name}>Зимперия</span>
                   </div>
-                  <Button styles={{ backgroundColor: "var(--black100)", color: "var(--white100)" }}>
+                  <Button styles={{ backgroundColor: 'var(--black100)', color: 'var(--white100)' }}>
                     Бан
                   </Button>
                 </div>
@@ -247,7 +247,7 @@ export namespace Match {
                     <img src="https://i.imgur.com/kx3jh90.png" alt="" />
                     <span className={style.name}>Замки</span>
                   </div>
-                  <Button styles={{ backgroundColor: "var(--black100)", color: "var(--white100)" }}>
+                  <Button styles={{ backgroundColor: 'var(--black100)', color: 'var(--white100)' }}>
                     Бан
                   </Button>
                 </div>
@@ -256,7 +256,7 @@ export namespace Match {
                     <img src="https://i.imgur.com/g7OF3AH.png" alt="" />
                     <span className={style.name}>Критаз</span>
                   </div>
-                  <Button styles={{ backgroundColor: "var(--black100)", color: "var(--white100)" }}>
+                  <Button styles={{ backgroundColor: 'var(--black100)', color: 'var(--white100)' }}>
                     Бан
                   </Button>
                 </div>
@@ -265,7 +265,7 @@ export namespace Match {
                     <img src="https://i.imgur.com/LPop0cH.png" alt="" />
                     <span className={style.name}>Алоз</span>
                   </div>
-                  <Button styles={{ backgroundColor: "var(--black100)", color: "var(--white100)" }}>
+                  <Button styles={{ backgroundColor: 'var(--black100)', color: 'var(--white100)' }}>
                     Бан
                   </Button>
                 </div>
@@ -288,16 +288,16 @@ export namespace Match {
                   </div>
                   <div className={style.inputWrapper}>
                     <input
-                      type={"text"}
+                      type={'text'}
                       readOnly
-                      value={"https://discord.com/invite/kbjrHZsCPd"}
+                      value={'https://discord.com/invite/kbjrHZsCPd'}
                       className={style.input}
                     />
                     <Button
                       styles={{
-                        backgroundColor: "var(--black100)",
-                        color: "var(--white100)",
-                        border: "none"
+                        backgroundColor: 'var(--black100)',
+                        color: 'var(--white100)',
+                        border: 'none'
                       }}>
                       Копировать
                     </Button>
@@ -312,10 +312,10 @@ export namespace Match {
               <div className={style.defaultInfo}>
                 <button className={style.avatarButton}>
                   <Avatar
-                    widthPremium={"14px"}
-                    heightPremium={"14px"}
-                    username={"Jassix"}
-                    styles={{ width: "40px", height: "40px" }}
+                    widthPremium={14}
+                    heightPremium={14}
+                    username={'Jassix'}
+                    styles={{ width: '40px', height: '40px' }}
                   />
                 </button>
                 <span className={style.username}>Jassix</span>
@@ -351,10 +351,10 @@ export namespace Match {
               <div className={style.defaultInfo}>
                 <button className={style.avatarButton}>
                   <Avatar
-                    widthPremium={"14px"}
-                    heightPremium={"14px"}
-                    username={"wassty"}
-                    styles={{ width: "40px", height: "40px" }}
+                    widthPremium={14}
+                    heightPremium={14}
+                    username={'wassty'}
+                    styles={{ width: '40px', height: '40px' }}
                   />
                 </button>
                 <span className={style.username}>wassty</span>
@@ -394,57 +394,57 @@ export namespace Match {
               <div className={style.team}>
                 <button className={style.avatarButton}>
                   <Avatar
-                    widthPremium={"14px"}
-                    heightPremium={"14px"}
-                    username={"Orphans"}
-                    styles={{ width: "35px", height: "35px" }}
+                    widthPremium={14}
+                    heightPremium={14}
+                    username={'Orphans'}
+                    styles={{ width: '35px', height: '35px' }}
                   />
                 </button>
                 <span className={style.name}>team_orphans</span>
               </div>
-              <span className={style.result} style={{ color: "var(--green)" }}>
+              <span className={style.result} style={{ color: 'var(--green)' }}>
                 Победители
               </span>
             </div>
             <div className={style.bodyItem}>
               <table className={style.statistic}>
                 <thead>
-                <th style={{ width: "23%" }}>Игрок</th>
-                <th style={{ width: "17%" }}>Убийств</th>
-                <th style={{ width: "17%" }}>Смертей</th>
-                <th style={{ width: "10%" }}>K/D</th>
-                <th style={{ width: "8%" }}>MVP</th>
-                <th style={{ width: "10%" }}>EVP</th>
+                  <th style={{ width: '23%' }}>Игрок</th>
+                  <th style={{ width: '17%' }}>Убийств</th>
+                  <th style={{ width: '17%' }}>Смертей</th>
+                  <th style={{ width: '10%' }}>K/D</th>
+                  <th style={{ width: '8%' }}>MVP</th>
+                  <th style={{ width: '10%' }}>EVP</th>
                 </thead>
                 <tbody>
-                {team.map(
-                  (
-                    item: {
-                      username: string;
-                      kills: number;
-                      deaths: number;
-                      kd: number;
-                      mvp: boolean;
-                      evp: boolean;
-                    },
-                    key: number
-                  ) => (
-                    <tr key={key}>
-                      <td>
-                        <span>{item.username}</span>
-                      </td>
-                      <td>{item.kills}</td>
-                      <td>{item.deaths}</td>
-                      <td>{item.kd}</td>
-                      <td>
-                        <span>{item.mvp ? "+" : "-"}</span>
-                      </td>
-                      <td>
-                        <span>{item.evp ? "+" : "-"}</span>
-                      </td>
-                    </tr>
-                  )
-                )}
+                  {team.map(
+                    (
+                      item: {
+                        username: string;
+                        kills: number;
+                        deaths: number;
+                        kd: number;
+                        mvp: boolean;
+                        evp: boolean;
+                      },
+                      key: number
+                    ) => (
+                      <tr key={key}>
+                        <td>
+                          <span>{item.username}</span>
+                        </td>
+                        <td>{item.kills}</td>
+                        <td>{item.deaths}</td>
+                        <td>{item.kd}</td>
+                        <td>
+                          <span>{item.mvp ? '+' : '-'}</span>
+                        </td>
+                        <td>
+                          <span>{item.evp ? '+' : '-'}</span>
+                        </td>
+                      </tr>
+                    )
+                  )}
                 </tbody>
               </table>
             </div>
@@ -454,57 +454,57 @@ export namespace Match {
               <div className={style.team}>
                 <button className={style.avatarButton}>
                   <Avatar
-                    widthPremium={"14px"}
-                    heightPremium={"14px"}
-                    username={"Jassix"}
-                    styles={{ width: "35px", height: "35px" }}
+                    widthPremium={14}
+                    heightPremium={14}
+                    username={'Jassix'}
+                    styles={{ width: '35px', height: '35px' }}
                   />
                 </button>
                 <span className={style.name}>team_jassix</span>
               </div>
-              <span className={style.result} style={{ color: "var(--red)" }}>
+              <span className={style.result} style={{ color: 'var(--red)' }}>
                 Проигравшие
               </span>
             </div>
             <div className={style.bodyItem}>
               <table className={style.statistic}>
                 <thead>
-                <th style={{ width: "23%" }}>Игрок</th>
-                <th style={{ width: "17%" }}>Убийств</th>
-                <th style={{ width: "17%" }}>Смертей</th>
-                <th style={{ width: "10%" }}>K/D</th>
-                <th style={{ width: "8%" }}>MVP</th>
-                <th style={{ width: "10%" }}>EVP</th>
+                  <th style={{ width: '23%' }}>Игрок</th>
+                  <th style={{ width: '17%' }}>Убийств</th>
+                  <th style={{ width: '17%' }}>Смертей</th>
+                  <th style={{ width: '10%' }}>K/D</th>
+                  <th style={{ width: '8%' }}>MVP</th>
+                  <th style={{ width: '10%' }}>EVP</th>
                 </thead>
                 <tbody>
-                {team.map(
-                  (
-                    item: {
-                      username: string;
-                      kills: number;
-                      deaths: number;
-                      kd: number;
-                      mvp: boolean;
-                      evp: boolean;
-                    },
-                    key: number
-                  ) => (
-                    <tr key={key}>
-                      <td>
-                        <span>{item.username}</span>
-                      </td>
-                      <td>{item.kills}</td>
-                      <td>{item.deaths}</td>
-                      <td>{item.kd}</td>
-                      <td>
-                        <span>{item.mvp ? "+" : "-"}</span>
-                      </td>
-                      <td>
-                        <span>{item.evp ? "+" : "-"}</span>
-                      </td>
-                    </tr>
-                  )
-                )}
+                  {team.map(
+                    (
+                      item: {
+                        username: string;
+                        kills: number;
+                        deaths: number;
+                        kd: number;
+                        mvp: boolean;
+                        evp: boolean;
+                      },
+                      key: number
+                    ) => (
+                      <tr key={key}>
+                        <td>
+                          <span>{item.username}</span>
+                        </td>
+                        <td>{item.kills}</td>
+                        <td>{item.deaths}</td>
+                        <td>{item.kd}</td>
+                        <td>
+                          <span>{item.mvp ? '+' : '-'}</span>
+                        </td>
+                        <td>
+                          <span>{item.evp ? '+' : '-'}</span>
+                        </td>
+                      </tr>
+                    )
+                  )}
                 </tbody>
               </table>
             </div>

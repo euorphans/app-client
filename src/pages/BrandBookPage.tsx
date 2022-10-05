@@ -1,13 +1,15 @@
-import React, { FC, useLayoutEffect } from "react";
-import { useLayout } from "../hooks/useLayout";
-import { BrandBook } from "../components/namespaces/brandbook/BrandBook";
+import React, { FC, useLayoutEffect } from 'react';
+import { useLayout } from '../hooks/useLayout';
+import { BrandBook } from '../components/namespaces/brandbook/BrandBook';
 // @ts-ignore
-import animatedLogo from "../static/images/animatedLogo.gif";
-import blackLogo from "../static/images/logo/logo-dark.svg";
-import whiteLogo from "../static/images/logo/logo.svg";
-import { Button } from "../components/ui/button/Button";
-import { ArrowIcon } from "../components/icons/Icons";
-import RainbowBackground from "../static/images/rainbowBackground.svg";
+import animatedLogo from '../static/images/animatedLogo.gif';
+import markLogoWhite from '../static/images/logo/mark/markLogoWhite.svg';
+import markLogoBlack from '../static/images/logo/mark/markLogoBlack.svg';
+import fullLogoBlack from '../static/images/logo/full/fullLogoBlack.svg';
+import fullLogoWhite from '../static/images/logo/full/fullLogoWhite.svg';
+import { Button } from '../components/ui/button/Button';
+import { ArrowIcon } from '../components/icons/Icons';
+import RainbowBackground from '../static/images/rainbowBackground.svg';
 
 export const BrandBookPage: FC = () => {
   const { state: layout } = useLayout();
@@ -19,12 +21,13 @@ export const BrandBookPage: FC = () => {
   }, []);
 
   return (
-    <div style={{ minHeight: "calc(100vh - 333px)" }}>
+    <div style={{ minHeight: 'calc(100vh - 333px)' }}>
       <BrandBook.Heading>
         <BrandBook.HeadingColumn>
           <BrandBook.HeadingColumnHeading>
             <BrandBook.HeadingColumnHeadingTitle>
-              Как использовать<br /> брендинг Danger Zone
+              Как использовать
+              <br /> брендинг Danger Zone
             </BrandBook.HeadingColumnHeadingTitle>
             <BrandBook.HeadingColumnHeadingDescription>
               Вы сотрудничаете с Danger Zone, работаете в Danger Zone или создаете производное
@@ -34,15 +37,15 @@ export const BrandBookPage: FC = () => {
           </BrandBook.HeadingColumnHeading>
           <Button
             styles={{
-              height: "48px",
-              backgroundColor: "var(--black100)",
-              border: "none",
-              color: "var(--white100)",
-              paddingLeft: "40px",
-              paddingRight: "40px",
-              display: "flex",
-              flexDirection: "row",
-              gap: "var(--space-2)"
+              height: '48px',
+              backgroundColor: 'var(--black100)',
+              border: 'none',
+              color: 'var(--white100)',
+              paddingLeft: '40px',
+              paddingRight: '40px',
+              display: 'flex',
+              flexDirection: 'row',
+              gap: 'var(--space-2)'
             }}>
             <ArrowIcon /> Скачать архив брендбука
           </Button>
@@ -51,19 +54,59 @@ export const BrandBookPage: FC = () => {
           <img
             src={animatedLogo}
             style={{
-              width: "100%",
-              height: "100%",
-              borderRadius: "100%",
-              userSelect: "none"
+              width: '100%',
+              height: '100%',
+              borderRadius: '100%',
+              userSelect: 'none'
             }}
             alt=""
           />
         </BrandBook.HeadingColumn>
       </BrandBook.Heading>
       <BrandBook.Branding>
-        <BrandBook.BrandingItem title={'Наш логотип'} description={'Ебаный в рот это казино, ебааааать....'}>
-          <BrandBook.BrandingItemImagesItem image={blackLogo} background={'#fff'} widthImage={42.5} heightImage={50} />
-          <BrandBook.BrandingItemImagesItem image={whiteLogo} styles={{ borderColor: '#fff' }} background={RainbowBackground} widthImage={42.5} heightImage={50} />
+        <BrandBook.BrandingItem
+          title={{ text: 'Наш логотип' }}
+          description={'Используйте наш логотип в черном или белом цвете'}>
+          <BrandBook.BrandingItemImagesItem
+            image={fullLogoBlack}
+            background={{ color: 'var(--white100)' }}
+            widthImage={194.19}
+            heightImage={38.26}
+          />
+          <BrandBook.BrandingItemImagesItem
+            image={fullLogoWhite}
+            background={{ color: 'var(--black100)' }}
+            widthImage={194.19}
+            heightImage={38.26}
+          />
+          <BrandBook.BrandingItemImagesItem
+            image={fullLogoWhite}
+            styles={{ borderColor: 'var(--white100)' }}
+            background={{ color: 'var(--white100)', image: RainbowBackground }}
+            widthImage={194.19}
+            heightImage={38.26}
+          />
+        </BrandBook.BrandingItem>
+        <BrandBook.BrandingItem title={{ text: 'Только иконка', size: 28 }}>
+          <BrandBook.BrandingItemImagesItem
+            image={markLogoBlack}
+            background={{ color: 'var(--white100)' }}
+            widthImage={42.5}
+            heightImage={50}
+          />
+          <BrandBook.BrandingItemImagesItem
+            image={markLogoWhite}
+            background={{ color: 'var(--black100)' }}
+            widthImage={42.5}
+            heightImage={50}
+          />
+          <BrandBook.BrandingItemImagesItem
+            image={markLogoWhite}
+            styles={{ borderColor: 'var(--white100)' }}
+            background={{ color: 'var(--white100)', image: RainbowBackground }}
+            widthImage={42.5}
+            heightImage={50}
+          />
         </BrandBook.BrandingItem>
       </BrandBook.Branding>
     </div>

@@ -1,6 +1,6 @@
-import style from "./BrandBook.module.scss";
-import React, { FC } from "react";
-import { Button } from "../../ui/button/Button";
+import style from './BrandBook.module.scss';
+import React, { FC, useState } from 'react';
+import { Button } from '../../ui/button/Button';
 
 export namespace BrandBook {
   export const Heading: FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -19,7 +19,9 @@ export namespace BrandBook {
     return <span className={style.title}>{children}</span>;
   };
 
-  export const HeadingColumnHeadingDescription: FC<{ children: React.ReactNode }> = ({ children }) => {
+  export const HeadingColumnHeadingDescription: FC<{ children: React.ReactNode }> = ({
+    children
+  }) => {
     return <span className={style.description}>{children}</span>;
   };
 
@@ -27,34 +29,51 @@ export namespace BrandBook {
     return <span className={style.branding}>{children}</span>;
   };
 
-  export const BrandingItem: FC<{ children: React.ReactNode, title: string, description?: string }> = ({
-                                                                                                        title,
-                                                                                                        description,
-                                                                                                        children
-                                                                                                      }) => {
+  export const BrandingItem: FC<{
+    children: React.ReactNode;
+    title: { text: string; size?: number };
+    description?: string;
+  }> = ({ title, description, children }) => {
     return (
       <div className={style.item}>
         <div className={style.heading}>
-          <span className={style.title}>{title}</span>
+          <span className={style.title} style={{ fontSize: title.size && 32 }}>
+            {title.text}
+          </span>
           <span className={style.description}>{description}</span>
         </div>
-        <div className={style.images}>
-          {children}
-        </div>
+        <div className={style.images}>{children}</div>
       </div>
     );
   };
 
-  export const BrandingItemImagesItem: FC<{ styles?: any, heightImage: number, widthImage: number, background: string, image: string }> = ({
-                                                                                                                                             styles,
-                                                                                                                                             heightImage,
-                                                                                                                                             widthImage,
-                                                                                                                                             background,
-                                                                                                                                             image
-                                                                                                                                           }) => {
+  export const BrandingItemImagesItem: FC<{
+    styles?: any;
+    heightImage: number;
+    widthImage: number;
+    background: { color: string; image?: string };
+    image: string;
+  }> = ({ styles, heightImage, widthImage, background, image }) => {
+    const [visibility, setVisibility] = useState(false);
+
     return (
-      <div className={style.item} style={{ ...styles, background: `url(${background})` }}>
-        <div className={style.buttons}>
+      <div
+        className={style.item}
+        onMouseEnter={() => setVisibility(true)}
+        onMouseLeave={() => setVisibility(false)}
+        style={{
+          ...styles,
+          background: `url(${background.image})`,
+          backgroundColor: background.color
+        }}>
+        <div
+          className={style.buttons}
+          style={{
+            opacity: visibility ? 1 : 0,
+            animation: `0.2s ease 0s 1 normal forwards running ${
+              visibility ? style.buttonsAnimationShow : style.buttonsAnimationHidden
+            }`
+          }}>
           <Button>PNG</Button>
           <Button>SVG</Button>
         </div>

@@ -50,7 +50,7 @@ export namespace Subscription {
               className={style.lol}
               variants={multipleStarModalAnimation}
               initial={'initial'}>
-              <StarIcon width={'5000px'} height={'5000px'} />
+              <StarIcon width={5000} height={5000} />
             </motion.div>
             <Modal.Content width={500} setState={state.setHandler}>
               <div className={modalStyle.header}>
@@ -276,7 +276,7 @@ export namespace Subscription {
               </div>
               <div className={style.item}>
                 <span className={style.textIcon}>
-                  <CheckIcon width={'24px'} height={'24px'} />
+                  <CheckIcon width={24} height={24} />
                 </span>
                 <span className={style.textHidden}>Бесплатный подбор противников</span>
               </div>
@@ -332,13 +332,13 @@ export namespace Subscription {
               </div>
               <div className={style.item}>
                 <span className={style.textIcon}>
-                  <CheckIcon width={'24px'} height={'24px'} />
+                  <CheckIcon width={24} height={24} />
                 </span>
                 <span className={style.textHidden}>Бесплатный подбор противников</span>
               </div>
               <div className={style.item}>
                 <span className={style.textIcon}>
-                  <CheckIcon width={'24px'} height={'24px'} />
+                  <CheckIcon width={24} height={24} />
                 </span>
                 <span className={style.textHidden}>Премиум-подбор соперников</span>
               </div>
@@ -352,13 +352,13 @@ export namespace Subscription {
               </div>
               <div className={style.item}>
                 <span className={style.textIcon}>
-                  <CheckIcon width={'24px'} height={'24px'} />
+                  <CheckIcon width={24} height={24} />
                 </span>
                 <span className={style.textHidden}>Без рекламы</span>
               </div>
               <div className={style.item}>
                 <span className={style.textIcon}>
-                  <CheckIcon width={'24px'} height={'24px'} />
+                  <CheckIcon width={24} height={24} />
                 </span>
                 <span className={style.textHidden}>Анимированная обложка профиля</span>
               </div>
@@ -375,7 +375,7 @@ export namespace Subscription {
               <div className={style.item} style={{ gap: 'var(--space-2)' }}>
                 <span className={style.textHidden}>Значок за подписку</span>
                 <span className={style.textIconPremium}>
-                  <StarBackgroundIcon width={'24px'} height={'24px'} />
+                  <StarBackgroundIcon width={24} height={24} />
                 </span>
               </div>
             </div>
@@ -409,13 +409,13 @@ export namespace Subscription {
               </div>
               <div className={style.item}>
                 <span className={style.textIcon}>
-                  <CheckIcon width={'24px'} height={'24px'} />
+                  <CheckIcon width={24} height={24} />
                 </span>
                 <span className={style.textHidden}>Бесплатный подбор противников</span>
               </div>
               <div className={style.item}>
                 <span className={style.textIcon}>
-                  <CheckIcon width={'24px'} height={'24px'} />
+                  <CheckIcon width={24} height={24} />
                 </span>
                 <span className={style.textHidden}>Премиум-подбор соперников</span>
               </div>
@@ -432,38 +432,38 @@ export namespace Subscription {
               </div>
               <div className={style.item}>
                 <span className={style.textIcon}>
-                  <CheckIcon width={'24px'} height={'24px'} />
+                  <CheckIcon width={24} height={24} />
                 </span>
                 <span className={style.textHidden}>Без рекламы</span>
               </div>
               <div className={style.item}>
                 <span className={style.textIcon}>
-                  <CheckIcon width={'24px'} height={'24px'} />
+                  <CheckIcon width={24} height={24} />
                 </span>
                 <span className={style.textHidden}>Анимированная обложка профиля</span>
               </div>
               <div className={style.item}>
                 <span className={style.textIcon}>
-                  <CheckIcon width={'24px'} height={'24px'} />
+                  <CheckIcon width={24} height={24} />
                 </span>
                 <span className={style.textHidden}>Приоритетная возможность стать капитаном</span>
               </div>
               <div className={style.item}>
                 <span className={style.textIcon}>
-                  <CheckIcon width={'24px'} height={'24px'} />
+                  <CheckIcon width={24} height={24} />
                 </span>
                 <span className={style.textHidden}>Выбор карты</span>
               </div>
               <div className={style.item}>
                 <span className={style.textIcon}>
-                  <CheckIcon width={'24px'} height={'24px'} />
+                  <CheckIcon width={24} height={24} />
                 </span>
                 <span className={style.textHidden}>Премиум-поддержка клиентов</span>
               </div>
               <div className={style.item} style={{ gap: 'var(--space-2)' }}>
                 <span className={style.textHidden}>Значок за подписку</span>
                 <span className={style.textIconPremium}>
-                  <StarIcon width={'24px'} height={'24px'} />
+                  <StarIcon width={24} height={24} />
                 </span>
               </div>
             </div>

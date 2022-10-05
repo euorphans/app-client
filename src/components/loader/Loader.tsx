@@ -1,16 +1,14 @@
-// @ts-ignore
 import style from './Loader.module.css';
 import React, { FC } from 'react';
 import ContentLoader from 'react-content-loader';
+import { ComponentInterface } from '../../models/interfaces/Component.interface';
 
-interface SkeletonLoaderI {
+interface SkeletonLoader extends ComponentInterface {
   background?: string;
   foreground?: string;
-  children: React.ReactNode;
   isLoading: boolean;
   items: Array<{ element: React.CElement<any, any> }>;
   viewBox?: string;
-  customStyles?: any;
 }
 
 export const Loader: FC = () => {
@@ -21,10 +19,10 @@ export const Loader: FC = () => {
   );
 };
 
-export const SkeletonLoader: FC<SkeletonLoaderI> = ({
+export const SkeletonLoader: FC<SkeletonLoader> = ({
   background,
   viewBox,
-  customStyles,
+  styles,
   foreground,
   isLoading,
   children,
@@ -36,7 +34,7 @@ export const SkeletonLoader: FC<SkeletonLoaderI> = ({
       viewBox={viewBox ? viewBox : '0 0 476 124'}
       backgroundColor={background ? background : 'var(--black04)'}
       foregroundColor={foreground ? foreground : 'var(--white100)'}
-      style={{ ...customStyles }}>
+      style={{ ...styles }}>
       {items.map((item) => (
         <>{item.element}</>
       ))}

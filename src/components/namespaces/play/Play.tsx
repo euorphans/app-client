@@ -11,9 +11,9 @@ import { ButtonsSlider } from '../../ui/buttonsSlider/ButtonsSlider';
 import { pickSelection } from '../../../utils/Items';
 import { CloseIcon } from '../../icons/Icons';
 
-import BW2v2 from '../../../static/images/BedWars/BW2v2.png';
-import BW4v4 from '../../../static/images/BedWars/BW4v4.png';
-import BW6v6 from '../../../static/images/BedWars/BW6v6.png';
+import BW2v2 from '../../../static/images/bedwars/BW2v2.png';
+import BW4v4 from '../../../static/images/bedwars/BW4v4.png';
+import BW6v6 from '../../../static/images/bedwars/BW6v6.png';
 
 const globalState = createState({ tab: 0 });
 

@@ -2,11 +2,11 @@ import React, { FC } from 'react';
 import style from './RainbowText.module.scss';
 import { ComponentInterface } from '../../models/interfaces/Component.interface';
 
-interface RainbowTextInterface extends ComponentInterface {
+interface RainbowText extends ComponentInterface {
   blur: boolean;
 }
 
-export const RainbowText: FC<RainbowTextInterface> = ({ children, blur, styles, className }) => {
+export const RainbowText: FC<RainbowText> = ({ children, blur, styles, className }) => {
   return (
     <span
       className={className ? `${style.textGradientAll} ${className}` : style.textGradientAll}

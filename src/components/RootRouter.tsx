@@ -6,8 +6,8 @@ import { Forbidden } from '../pages/Forbidden';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 export const RootRouter: FC = () => {
-  const { isAuth, isUserLoading } = useTypedSelector((state) => state.auth);
-  const { roles, perms } = useTypedSelector((state) => state.perms);
+  const { isAuth } = useTypedSelector((state) => state.auth);
+  const { perms } = useTypedSelector((state) => state.perms);
   const location = useLocation();
 
   return (

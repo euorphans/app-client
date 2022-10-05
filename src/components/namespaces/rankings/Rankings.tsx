@@ -80,7 +80,7 @@ export namespace Rankings {
                     initial={'initial'}
                     animate={'animate'}
                     exit={'exit'}>
-                    <ArrowIcon height={'24px'} width={'24px'} />
+                    <ArrowIcon height={24} width={24} />
                   </motion.div>
                 ) : null}
               </AnimatePresence>

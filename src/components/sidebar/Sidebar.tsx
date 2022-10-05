@@ -1,7 +1,7 @@
 import style from './Sidebar.module.scss';
 import React, { FC, useCallback, useEffect, useLayoutEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ItemsT } from '../../utils/Items';
+import { Items } from '../../utils/Items';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { useActions } from '../../hooks/useActions';
 import { motion } from 'framer-motion';
@@ -14,9 +14,9 @@ interface SidebarSettingsInterface {
 }
 
 interface SidebarInterface extends SidebarSettingsInterface {
-  items: ItemsT;
-  additionalItems?: { show: boolean; items: ItemsT };
-  footerItems?: { show: boolean; items: ItemsT };
+  items: Items;
+  additionalItems?: { show: boolean; items: Items };
+  footerItems?: { show: boolean; items: Items };
   setState?: any;
   state?: any;
   styles?: any;
@@ -28,11 +28,11 @@ interface SidebarHeaderInterface extends SidebarSettingsInterface {
 }
 
 interface SidebarBodyInterface {
-  items: ItemsT;
+  items: Items;
 }
 
 interface SidebarAdditionalInterface {
-  items: ItemsT;
+  items: Items;
 }
 
 const SidebarHeader: FC<SidebarHeaderInterface> = ({ state, settings }) => {
@@ -45,7 +45,7 @@ const SidebarHeader: FC<SidebarHeaderInterface> = ({ state, settings }) => {
           onClick={() =>
             state.setHandler({ state: false, sideItems: Object.entries(state).slice(-1) })
           }>
-          <CloseIcon width={'22px'} height={'22px'} />
+          <CloseIcon width={22} height={22} />
         </Button>
       )}
     </div>

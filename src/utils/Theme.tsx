@@ -14,7 +14,7 @@ export const subscribeToast = {
     gap: 'var(--space-1)',
     width: '300px'
   },
-  icon: <StarIcon width={'24px'} height={'24px'} />
+  icon: <StarIcon width={24} height={24} />
 };
 
 export const successToast = {
@@ -29,7 +29,7 @@ export const successToast = {
     gap: 'var(--space-1)',
     width: '300px'
   },
-  icon: <CheckIcon width={'24px'} height={'24px'} />
+  icon: <CheckIcon width={24} height={24} />
 };
 
 export const errorToast = {
@@ -44,7 +44,7 @@ export const errorToast = {
     gap: 'var(--space-1)',
     width: '300px'
   },
-  icon: <CloseIcon width={'24px'} height={'24px'} />
+  icon: <CloseIcon width={24} height={24} />
 };
 
 export const loadingToast = {

@@ -5,14 +5,14 @@ import { Footer } from '../footer/Footer';
 import { Toaster } from 'react-hot-toast';
 import { Container } from '../ui/container/Container';
 
-interface LayoutI {
+interface Layout {
   useNavbar: boolean;
   useFooter: { state: boolean; topPeace: boolean };
   children: React.ReactNode;
   useContainer: boolean;
 }
 
-export const Layout: FC<LayoutI> = ({ children, useFooter, useContainer, useNavbar }) => {
+export const Layout: FC<Layout> = ({ children, useFooter, useContainer, useNavbar }) => {
   return (
     <>
       {useNavbar && <Navbar items={NavbarItems} />}

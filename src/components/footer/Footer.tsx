@@ -9,11 +9,11 @@ import MasterCardIcon from '../../static/images/payment/logo/MasterCard.svg';
 import MirIcon from '../../static/images/payment/logo/Mir.svg';
 import { RoutesEnum } from '../../router';
 
-interface FooterI {
+interface Footer {
   topPeace?: boolean;
 }
 
-export const Footer: FC<FooterI> = ({ topPeace }) => {
+export const Footer: FC<Footer> = ({ topPeace }) => {
   const location = useLocation();
 
   return (
@@ -22,12 +22,7 @@ export const Footer: FC<FooterI> = ({ topPeace }) => {
         {topPeace && (
           <div className={style.head}>
             <div className={style.itemLeft}>
-              <Logo
-                width={'47px'}
-                height={'51px'}
-                type={'white'}
-                styles={{ justifyContent: 'center' }}
-              />
+              <Logo styles={{ justifyContent: 'center' }} />
             </div>
             <div className={style.item}>
               <span className={style.title}>Ссылки</span>
@@ -60,7 +55,12 @@ export const Footer: FC<FooterI> = ({ topPeace }) => {
               </Link>
             </div>
             <div className={style.item} style={{ justifyContent: 'space-between' }}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 'var(--space-4)'
+                }}>
                 <span className={style.title}>Наше сообщество</span>
                 <div className={style.socials}>
                   <a target={'_blank'} href={'https://t.me/dangerzoneSU'} rel="noreferrer">

@@ -1,13 +1,12 @@
-import React, { FC, useCallback, useEffect, useLayoutEffect, useState } from 'react';
+import React, { FC, useCallback, useEffect, useLayoutEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import disableScroll from 'disable-scroll';
-
 import { Button } from '../ui/button/Button';
 import { CloseIcon } from '../icons/Icons';
 import style from './Modal.module.scss';
 import { modalAnimation, opacityAnimation } from '../../utils/Animations';
 
-interface ModalI {
+interface Modal {
   width?: number;
   height?: number;
   scroll?: string;
@@ -17,7 +16,7 @@ interface ModalI {
 }
 
 export namespace Modal {
-  export const BackDrop: FC<ModalI> = ({ children, state, setState }) => {
+  export const BackDrop: FC<Modal> = ({ children, state, setState }) => {
     const escFunction = useCallback((event: any) => {
       if (event.key === 'Escape') {
         setState(false);
@@ -59,7 +58,7 @@ export namespace Modal {
     );
   };
 
-  export const Wrapper: FC<ModalI> = ({ children, setState }) => {
+  export const Wrapper: FC<Modal> = ({ children, setState }) => {
     return (
       <div className={style.wrapper}>
         <div className={style.buttonWrapper}>
@@ -72,7 +71,7 @@ export namespace Modal {
               width: '40px',
               padding: '0'
             }}>
-            <CloseIcon width={'22px'} height={'22px'} />
+            <CloseIcon width={22} height={22} />
           </Button>
         </div>
         {children}
@@ -80,7 +79,7 @@ export namespace Modal {
     );
   };
 
-  export const Content: FC<ModalI> = ({ width, height, setState, children }) => {
+  export const Content: FC<Modal> = ({ width, height, setState, children }) => {
     return (
       <>
         <div className={style.spaceArea} onClick={() => setState(false)}></div>

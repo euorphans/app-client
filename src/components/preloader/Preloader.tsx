@@ -1,4 +1,3 @@
-// @ts-ignore
 import style from './Preloader.module.scss';
 import React, { FC, useEffect, useLayoutEffect } from 'react';
 import { Logo } from '../ui/logo/Logo';
@@ -14,7 +13,6 @@ interface PreloaderI {
 
 export const Preloader: FC<PreloaderI> = ({ query, children, state }) => {
   const { state: layout } = useLayout();
-  const time = performance.now();
 
   useLayoutEffect(() => {
     query
@@ -45,7 +43,7 @@ export const Preloader: FC<PreloaderI> = ({ query, children, state }) => {
     <>{children}</>
   ) : (
     <div className={style.preloader} style={{ background: 'white' }}>
-      <Logo width={'140px'} height={'140px'} />
+      <Logo width={119} height={140} />
     </div>
   );
 };

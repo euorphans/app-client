@@ -1,16 +1,7 @@
-// @ts-ignore
 import style from './Popover.module.scss';
 import React, { FC, useEffect, useRef } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-import {
-  arrowAnimation,
-  modalAnimation,
-  opacityAnimation,
-  popoverAnimation,
-  sidebarAnimation
-} from '../../utils/Animations';
 
-interface PopoverI {
+interface Popover {
   state: {
     value: Array<{ index: string; value: boolean }>;
     setState: React.Dispatch<React.SetStateAction<any>>;
@@ -21,7 +12,7 @@ interface PopoverI {
   ref?: any;
 }
 
-export const Popover: FC<PopoverI> = ({ state, ref, anchor, children }) => {
+export const Popover: FC<Popover> = ({ state, ref, anchor, children }) => {
   const contentRef: any = useRef(0);
   const wrapperRef: any = useRef(0);
   const [height, setHeight] = React.useState({ wrapper: 0, content: 0 });
