@@ -1,11 +1,13 @@
-import React, { FC, useLayoutEffect } from 'react';
-import { useLayout } from '../hooks/useLayout';
-import { BrandBook } from '../components/namespaces/brandbook/BrandBook';
+import React, { FC, useLayoutEffect } from "react";
+import { useLayout } from "../hooks/useLayout";
+import { BrandBook } from "../components/namespaces/brandbook/BrandBook";
 // @ts-ignore
-import animatedLogo from '../static/images/animatedLogo.gif';
-import style from './../components/namespaces/brandbook/BrandBook.module.scss';
-import { Button } from '../components/ui/button/Button';
-import { ArrowIcon, ShareIcon } from '../components/icons/Icons';
+import animatedLogo from "../static/images/animatedLogo.gif";
+import blackLogo from "../static/images/logo/logo-dark.svg";
+import whiteLogo from "../static/images/logo/logo.svg";
+import { Button } from "../components/ui/button/Button";
+import { ArrowIcon } from "../components/icons/Icons";
+import RainbowBackground from "../static/images/rainbowBackground.svg";
 
 export const BrandBookPage: FC = () => {
   const { state: layout } = useLayout();
@@ -17,28 +19,30 @@ export const BrandBookPage: FC = () => {
   }, []);
 
   return (
-    <div style={{ minHeight: 'calc(100vh - 333px)' }}>
+    <div style={{ minHeight: "calc(100vh - 333px)" }}>
       <BrandBook.Heading>
         <BrandBook.HeadingColumn>
-          <BrandBook.HeadingWrapper>
-            <BrandBook.HeadingTitle>Как использовать брендинг Danger Zone</BrandBook.HeadingTitle>
-            <BrandBook.HeadingDescription>
-              Вы сотрудничаете с DangerZone, работаете в DangerZone или создаете производное
+          <BrandBook.HeadingColumnHeading>
+            <BrandBook.HeadingColumnHeadingTitle>
+              Как использовать<br /> брендинг Danger Zone
+            </BrandBook.HeadingColumnHeadingTitle>
+            <BrandBook.HeadingColumnHeadingDescription>
+              Вы сотрудничаете с Danger Zone, работаете в Danger Zone или создаете производное
               искусство? В этом кратком руководстве показано, что вы можете и чего не можете делать
-              с элементами брендинга DangerZone.
-            </BrandBook.HeadingDescription>
-          </BrandBook.HeadingWrapper>
+              с элементами брендинга Danger Zone.
+            </BrandBook.HeadingColumnHeadingDescription>
+          </BrandBook.HeadingColumnHeading>
           <Button
             styles={{
-              height: '48px',
-              backgroundColor: 'var(--black100)',
-              border: 'none',
-              color: 'var(--white100)',
-              paddingLeft: '40px',
-              paddingRight: '40px',
-              display: 'flex',
-              flexDirection: 'row',
-              gap: 'var(--space-2)'
+              height: "48px",
+              backgroundColor: "var(--black100)",
+              border: "none",
+              color: "var(--white100)",
+              paddingLeft: "40px",
+              paddingRight: "40px",
+              display: "flex",
+              flexDirection: "row",
+              gap: "var(--space-2)"
             }}>
             <ArrowIcon /> Скачать архив брендбука
           </Button>
@@ -47,15 +51,21 @@ export const BrandBookPage: FC = () => {
           <img
             src={animatedLogo}
             style={{
-              width: '100%',
-              height: '100%',
-              borderRadius: '100%',
-              userSelect: 'none'
+              width: "100%",
+              height: "100%",
+              borderRadius: "100%",
+              userSelect: "none"
             }}
             alt=""
           />
         </BrandBook.HeadingColumn>
       </BrandBook.Heading>
+      <BrandBook.Branding>
+        <BrandBook.BrandingItem title={'Наш логотип'} description={'Ебаный в рот это казино, ебааааать....'}>
+          <BrandBook.BrandingItemImagesItem image={blackLogo} background={'#fff'} widthImage={42.5} heightImage={50} />
+          <BrandBook.BrandingItemImagesItem image={whiteLogo} styles={{ borderColor: '#fff' }} background={RainbowBackground} widthImage={42.5} heightImage={50} />
+        </BrandBook.BrandingItem>
+      </BrandBook.Branding>
     </div>
   );
 };

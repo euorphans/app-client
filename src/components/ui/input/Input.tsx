@@ -1,3 +1,8 @@
+import style from "./Input.module.scss";
+import { SearchIcon } from "../../icons/Icons";
+import { ComponentInterface } from "../../../models/interfaces/Component.interface";
+import { motion } from "framer-motion";
+
 import React, {
   ChangeEventHandler,
   FC,
@@ -5,12 +10,7 @@ import React, {
   useCallback,
   useEffect,
   useRef
-} from 'react';
-
-import style from './Input.module.scss';
-import { SearchIcon } from '../../icons/Icons';
-import { ComponentInterface } from '../../../models/interfaces/Component.interface';
-import { motion } from 'framer-motion';
+} from "react";
 
 interface InputI extends ComponentInterface {
   onChange?: ChangeEventHandler<HTMLInputElement>;
@@ -23,32 +23,32 @@ interface InputI extends ComponentInterface {
   additionalComponent?: { element: React.CElement<any, any>; state: boolean };
 }
 
-const Input: FC<InputI> = ({
-  placeholder,
-  onChange,
-  className,
-  options,
-  onKeyDown,
-  icon,
-  styles,
-  onClick,
-  additionalComponent
-}) => {
+export const Input: FC<InputI> = ({
+                                    placeholder,
+                                    onChange,
+                                    className,
+                                    options,
+                                    onKeyDown,
+                                    icon,
+                                    styles,
+                                    onClick,
+                                    additionalComponent
+                                  }) => {
   const Ref = useRef() as React.MutableRefObject<HTMLInputElement>;
 
   const focusHandler = useCallback((event: any) => {
-    if (event.key === 'f') {
+    if (event.key === "f") {
       Ref.current.focus();
     }
   }, []);
 
   useEffect(() => {
     if (options.useFocus) {
-      document.addEventListener('keydown', focusHandler, false);
+      document.addEventListener("keydown", focusHandler, false);
       console.log(Ref.current);
 
       return () => {
-        document.removeEventListener('keydown', focusHandler, false);
+        document.removeEventListener("keydown", focusHandler, false);
       };
     }
   }, []);
@@ -59,7 +59,7 @@ const Input: FC<InputI> = ({
         onClick={onClick}
         className={className ? `${style.inputWrapper} ${className}` : style.inputWrapper}
         style={{ ...styles }}>
-        {icon && icon.position === 'left' ? (
+        {icon && icon.position === "left" ? (
           <div className={style.iconLeft}>{icon.item}</div>
         ) : null}
         <input
@@ -76,5 +76,3 @@ const Input: FC<InputI> = ({
     </motion.div>
   );
 };
-
-export default Input;

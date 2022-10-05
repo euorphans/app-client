@@ -14,7 +14,7 @@
     gap: var(--space-8);
     align-items: start;
 
-    .wrapper {
+    .heading {
       display: flex;
       flex-direction: column;
       gap: var(--space-6);
@@ -33,6 +33,116 @@
         color: var(--black60);
         font-weight: var(--fontWeights-medium);
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 975.98px) {
+  .heading {
+    display: flex;
+    flex-direction: column;
+
+    .column:first-child {
+      order: 1 !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 765.98px) {
+  .heading {
+    display: flex;
+    flex-direction: column;
+
+    .column {
+      .heading {
+        .title {
+          font-size: 32px !important;
+        }
+      }
+    }
+  }
+}
+
+.branding {
+  width: 100%;
+  max-width: 1220px;
+  margin: 56px auto 28px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+
+  .images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 290px);
+    gap: 32px 16px;
+
+    .item:hover .buttons {
+      transform: translateY(0px);
+      opacity: 1;
+      z-index: 10;
+    }
+
+    .item {
+      background-color: var(--white100);
+      border-radius: var(--radii-6);
+      border: 2px solid var(--black08);
+      height: 154px;
+      min-width: 290px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      position: relative;
+      z-index: 9;
+      top: 0;
+      overflow: hidden;
+
+      .buttons {
+        position: absolute;
+        opacity: 0;
+        transition: var(--transition15);
+        bottom: var(--space-3);
+        right: var(--space-3);
+        display: flex;
+        transform: translateY(100px);
+        flex-direction: row;
+        gap: var(--space-1);
+
+        button {
+          background-color: rgba(22, 22, 26, 0.4);
+          color: rgb(255, 255, 255);
+          width: 40px;
+          min-width: 40px;
+          height: 23px;
+          padding: 3px 6px;
+          border-radius: 5px;
+          font-size: 13px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .heading {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    align-items: start;
+
+    .title {
+      font-size: 40px;
+      margin: var(--space-0);
+      line-height: 46px;
+      font-weight: var(--fontWeights-semibold);
+    }
+
+    .description {
+      font-size: var(--fontSizes-2);
+      line-height: 26px;
+      color: var(--black60);
+      font-weight: var(--fontWeights-medium);
     }
   }
 }

@@ -15,7 +15,7 @@ import { useActions } from '../../hooks/useActions';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { promiseToast } from '../../utils/Toasts';
 import { useLocation, useNavigate } from 'react-router-dom';
-import Input from '../ui/input/Input';
+import { Input } from '../ui/input/Input';
 import { AnimatePresence } from 'framer-motion';
 import disableScroll from 'disable-scroll';
 

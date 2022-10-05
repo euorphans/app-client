@@ -4,7 +4,7 @@ import { useLayout } from '../hooks/useLayout';
 import { RainbowText } from '../components/rainbowText/RainbowText';
 import { Button } from '../components/ui/button/Button';
 import { useNavigate } from 'react-router-dom';
-import Input from '../components/ui/input/Input';
+import { Input } from '../components/ui/input/Input';
 import { SearchIcon } from '../components/icons/Icons';
 import style from '../components/namespaces/home/Home.module.scss';
 

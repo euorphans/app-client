@@ -12,7 +12,7 @@ import {
   VkIcon,
   YouTubeIcon
 } from '../../icons/Icons';
-import Input from '../../ui/input/Input';
+import { Input } from '../../ui/input/Input';
 import { Button } from '../../ui/button/Button';
 import { useTypedSelector } from '../../../hooks/useTypedSelector';
 import axios, { AxiosResponse } from 'axios';
