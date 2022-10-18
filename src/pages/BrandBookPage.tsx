@@ -10,6 +10,7 @@ import fullLogoWhite from '../static/images/logo/full/fullLogoWhite.svg';
 import { Button } from '../components/ui/button/Button';
 import { ArrowIcon } from '../components/icons/Icons';
 import RainbowBackground from '../static/images/rainbowBackground.svg';
+import { useNavigate } from 'react-router-dom';
 
 export const BrandBookPage: FC = () => {
   const { state: layout } = useLayout();

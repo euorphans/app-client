@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { NavbarItems } from '../../utils/Items';
 import { Navbar } from '../navbar/Navbar';
-import { Footer } from '../footer/Footer';
+import { FooterLayout } from '../footer/Footer';
 import { Toaster } from 'react-hot-toast';
 import { Container } from '../ui/container/Container';
 
@@ -17,7 +17,7 @@ export const Layout: FC<Layout> = ({ children, useFooter, useContainer, useNavba
     <>
       {useNavbar && <Navbar items={NavbarItems} />}
       {useContainer && <Container>{children}</Container>}
-      {useFooter.state && <Footer topPeace={useFooter.topPeace} />}
+      {useFooter.state && <FooterLayout />}
 
       <Toaster position={'bottom-right'} reverseOrder={false} />
     </>
