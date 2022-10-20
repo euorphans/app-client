@@ -53,7 +53,7 @@ export const routes: Array<IRoute> = [
   { path: RoutesEnum.PLAYER_PAGE, element: <PlayerPage />, privacy: setPrivacy(false, null) },
   { path: RoutesEnum.MATCH_PAGE, element: <MatchPage />, privacy: setPrivacy(false, null) },
   { path: RoutesEnum.PLAY_PAGE, element: <PlayPage />, privacy: setPrivacy(false, null) },
-  { path: RoutesEnum.REPORT_PAGE, element: <ReportPage />, privacy: setPrivacy(true, null) },
+  { path: RoutesEnum.REPORT_PAGE, element: <ReportPage />, privacy: setPrivacy(false, null) },
   { path: RoutesEnum.BRANDBOOK_PAGE, element: <BrandBookPage />, privacy: setPrivacy(false, null) },
   {
     path: RoutesEnum.SUBSCRIPTION_PAGE,

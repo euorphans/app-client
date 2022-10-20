@@ -9,7 +9,7 @@ import { StarIcon } from '../components/icons/Icons';
 import { Link } from 'react-router-dom';
 import { UserInterface } from '../models/interfaces/User.interface';
 import { Avatar } from '../components/ui/avatar/Avatar';
-import sidebarStyle from '../components/sidebar/Sidebar.module.scss';
+import sidebarStyle from '../components/sideBar/Sidebar.module.scss';
 
 export type Items = Array<{
   title?: string;

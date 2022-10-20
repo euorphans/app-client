@@ -1,14 +1,14 @@
+import modalStyle from '../modal/Modal.module.scss';
 import style from './Navbar.module.scss';
+import { Modal } from '../modal/Modal';
 import React, { FC, useLayoutEffect, useState } from 'react';
 import { Button } from '../ui/button/Button';
 import { Avatar } from '../ui/avatar/Avatar';
 import { Logo } from '../ui/logo/Logo';
-import { Sidebar } from '../sidebar/Sidebar';
+import { Sidebar } from '../sideBar/Sidebar';
 import { Items, NotifySidebar, ProfileItems } from '../../utils/Items';
 import { CloseIcon, LightIcon, SearchIcon } from '../icons/Icons';
 import { Container } from '../ui/container/Container';
-import { Modal } from '../modal/Modal';
-import modalStyle from '../modal/Modal.module.scss';
 import { useActions } from '../../hooks/useActions';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { promiseToast } from '../../utils/Toasts';

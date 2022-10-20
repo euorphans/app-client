@@ -1,6 +1,6 @@
 import React, { FC, useLayoutEffect } from 'react';
 import { Player } from '../components/namespaces/player/Player';
-import { Preloader } from '../components/preloader/Preloader';
+import { Preloader } from '../components/preLoader/Preloader';
 import UserService from '../services/UserService';
 import { useParams } from 'react-router-dom';
 import { useLayout } from '../hooks/useLayout';

@@ -27,7 +27,7 @@ export namespace Modal {
       if (state) {
         disableScroll.on();
         document.body.style.overflow = 'hidden';
-        document.body.style.height = '100%';
+        document.body.style.height = '100vh';
       } else {
         disableScroll.off();
         document.body.style.overflow = 'visible';
