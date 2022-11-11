@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Container } from '../ui/container/Container';
 import { Footer } from '../namespaces/footer/Footer';
-import { ComponentInterface } from '../../models/interfaces/Component.interface';
+import { ComponentInterface } from '../../types';
 
 interface Footer extends ComponentInterface {
   topPeace?: boolean;

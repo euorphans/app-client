@@ -1,5 +1,5 @@
 import { AuthAction, AuthActionEnum, AuthState } from './types';
-import { UserInterface } from '../../../models/interfaces/User.interface';
+import { UserInterface } from '../../../types';
 
 const initialState: AuthState = {
   isAuth: false,

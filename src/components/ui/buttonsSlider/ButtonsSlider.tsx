@@ -1,8 +1,7 @@
 import React, { FC, useLayoutEffect, useRef } from 'react';
-import { createState, useState } from '@hookstate/core';
 
 import style from './ButtonsSlider.module.scss';
-import { ComponentInterface } from '../../../models/interfaces/Component.interface';
+import { ComponentInterface } from '../../../types';
 
 export interface ButtonsSliderI extends ComponentInterface {
   items: Array<{ item: React.ReactNode; index: number }>;

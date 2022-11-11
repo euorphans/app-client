@@ -1,6 +1,5 @@
 import style from './Input.module.scss';
 import { SearchIcon } from '../../icons/Icons';
-import { ComponentInterface } from '../../../models/interfaces/Component.interface';
 import { motion } from 'framer-motion';
 
 import React, {
@@ -11,6 +10,7 @@ import React, {
   useEffect,
   useRef
 } from 'react';
+import { ComponentInterface } from '../../../types';
 
 interface InputI extends ComponentInterface {
   onChange?: ChangeEventHandler<HTMLInputElement>;

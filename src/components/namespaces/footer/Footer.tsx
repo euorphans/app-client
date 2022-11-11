@@ -7,7 +7,7 @@ import { DiscordIcon, TelegramIcon, VkIcon, YouTubeIcon } from '../../icons/Icon
 import VisaIcon from '../../../static/images/payment/logo/Visa.svg';
 import MasterCardIcon from '../../../static/images/payment/logo/MasterCard.svg';
 import MirIcon from '../../../static/images/payment/logo/Mir.svg';
-import { ComponentInterface } from '../../../models/interfaces/Component.interface';
+import { ComponentInterface } from '../../../types';
 
 interface Footer extends ComponentInterface {
   topPeace?: boolean;

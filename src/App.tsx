@@ -1,6 +1,6 @@
 import './App.scss';
 import './normalize.scss';
-import React, { FC, useEffect } from 'react';
+import React, { FC } from 'react';
 import { RootRouter } from './components/RootRouter';
 import { Layout } from './components/layout/Layout';
 import { useLayout } from './hooks/useLayout';

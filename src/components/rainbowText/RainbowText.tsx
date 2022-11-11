@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import style from './RainbowText.module.scss';
-import { ComponentInterface } from '../../models/interfaces/Component.interface';
+import { ComponentInterface } from '../../types';
 
 interface RainbowText extends ComponentInterface {
   blur: boolean;

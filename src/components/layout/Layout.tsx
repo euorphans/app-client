@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { NavbarItems } from '../../utils/Items';
-import { Navbar } from '../navBar/Navbar';
+import { Navbar } from '../navbar/Navbar';
 import { FooterLayout } from '../footer/Footer';
 import { Toaster } from 'react-hot-toast';
 import { Container } from '../ui/container/Container';

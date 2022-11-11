@@ -1,4 +1,4 @@
-import { UserInterface } from '../../../models/interfaces/User.interface';
+import { UserInterface } from '../../../types';
 
 export interface AuthState {
   isAuth: boolean;

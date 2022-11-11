@@ -1,16 +1,12 @@
 import React, { FC, useEffect, useState } from 'react';
-import { BiRightArrowAlt } from 'react-icons/bi';
 
 import { AnimatePresence, motion } from 'framer-motion';
 import style from './Rankings.module.scss';
-import { RainbowText } from '../../rainbowText/RainbowText';
-import { ComponentInterface } from '../../../models/interfaces/Component.interface';
-import { arrowAnimation, sidebarAnimation } from '../../../utils/Animations';
+import { arrowAnimation } from '../../../utils/Animations';
 import { useNavigate } from 'react-router-dom';
 import { Avatar } from '../../ui/avatar/Avatar';
 import { ArrowIcon } from '../../icons/Icons';
-
-type RankingsWrapperInterface = ComponentInterface;
+import { ComponentInterface } from '../../../types';
 
 interface RankingsTable {
   category: Array<string>;
@@ -18,7 +14,7 @@ interface RankingsTable {
 }
 
 export namespace Rankings {
-  export const Wrapper: FC<RankingsWrapperInterface> = ({ children }) => {
+  export const Wrapper: FC<ComponentInterface> = ({ children }) => {
     return <>{children}</>;
   };
 

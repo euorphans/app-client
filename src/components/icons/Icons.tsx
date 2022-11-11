@@ -230,7 +230,7 @@ export const CheckIcon: FC<Icon> = ({ viewBox, fill, height, width }) => {
   );
 };
 
-export const StarBackgroundIcon: FC<Icon> = ({ viewBox, fill, height, width }) => {
+export const PremiumBackgroundBlack: FC<Icon> = ({ viewBox, fill, height, width }) => {
   return (
     <div style={{ display: 'flex', width: width, height: height }}>
       <svg
@@ -249,9 +249,11 @@ export const StarBackgroundIcon: FC<Icon> = ({ viewBox, fill, height, width }) =
   );
 };
 
-export const StarIcon: FC<Icon> = ({ viewBox, fill, height, width, settings }) => {
+export const PremiumBackgroundGradient: FC<Icon> = ({ viewBox, fill, height, width, settings }) => {
   return (
-    <div className={style.StarIcon} style={{ display: 'flex', width: width, height: height }}>
+    <div
+      className={style.PremiumBackgroundGradient}
+      style={{ display: 'flex', width: width, height: height }}>
       <svg
         viewBox={viewBox ? viewBox : '0 0 24 24'}
         fill={fill ? fill : 'none'}

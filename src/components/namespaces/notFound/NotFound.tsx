@@ -6,16 +6,16 @@ import { FC } from 'react';
 
 interface NotFoundI {
   title: string;
-  subTitle: string;
+  description: string;
 }
 
 export namespace NotFound {
-  export const Body: FC<NotFoundI> = ({ title, subTitle }) => {
+  export const Body: FC<NotFoundI> = ({ title, description }) => {
     return (
       <div className={style.notFoundWrapper}>
         <div className={style.notFound}>
           <h1 className={style.title}>{title}</h1>
-          <span className={style.description}>{subTitle}</span>
+          <span className={style.description}>{description}</span>
           <div className={style.buttons}>
             <Button
               styles={{

@@ -1,7 +1,7 @@
 import style from './Loader.module.css';
 import React, { FC } from 'react';
 import ContentLoader from 'react-content-loader';
-import { ComponentInterface } from '../../models/interfaces/Component.interface';
+import { ComponentInterface } from '../../types';
 
 interface SkeletonLoader extends ComponentInterface {
   background?: string;

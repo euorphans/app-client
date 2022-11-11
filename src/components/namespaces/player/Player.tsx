@@ -11,13 +11,13 @@ import { Modal } from '../../modal/Modal';
 import { Popover, PopoverWrapper } from '../../popover/Popover';
 import { useTypedSelector } from '../../../hooks/useTypedSelector';
 import { NotFound } from '../notFound/NotFound';
-import { UserInterface } from '../../../models/interfaces/User.interface';
 import { RoutesEnum } from '../../../router';
 import modalStyle from '../../modal/Modal.module.scss';
 
 import BW2v2 from '../../../static/images/bedwars/BW2v2.png';
 import BW4v4 from '../../../static/images/bedwars/BW4v4.png';
 import BW6v6 from '../../../static/images/bedwars/BW6v6.png';
+import { UserInterface } from '../../../types';
 
 const globalState = createState({
   tab: 1,
@@ -48,7 +48,7 @@ export namespace Player {
     ) : (
       <NotFound.Body
         title={'404'}
-        subTitle={
+        description={
           'Нам не удалось найти данного игрока в нашей базе данных, возможно, он еще не авторизовался'
         }
       />

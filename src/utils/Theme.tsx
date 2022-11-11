@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { CheckIcon, CloseIcon, StarIcon } from '../components/icons/Icons';
+import { CheckIcon, CloseIcon, PremiumBackgroundGradient } from '../components/icons/Icons';
 
 export const subscribeToast = {
   duration: 5000,
@@ -14,7 +14,7 @@ export const subscribeToast = {
     gap: 'var(--space-1)',
     width: '300px'
   },
-  icon: <StarIcon width={24} height={24} />
+  icon: <PremiumBackgroundGradient width={24} height={24} />
 };
 
 export const successToast = {

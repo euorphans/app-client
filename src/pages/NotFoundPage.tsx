@@ -13,7 +13,7 @@ export const NotFoundPage: FC = () => {
 
   return (
     <div style={{ minHeight: 'calc(100vh - 321px)' }}>
-      <NotFound.Body title={'404'} subTitle={'Мы не можем найти страницу, которую вы ищете'} />
+      <NotFound.Body title={'404'} description={'Мы не можем найти страницу, которую вы ищете'} />
     </div>
   );
 };

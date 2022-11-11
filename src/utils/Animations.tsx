@@ -16,6 +16,19 @@ export const sidebarAnimation = {
   }
 };
 
+export const slideAnimation = {
+  initial: {
+    opacity: 0,
+    swiftness: 100,
+    y: 100
+  },
+  whileInView: {
+    opacity: 1,
+    swiftness: 50,
+    y: 0
+  }
+};
+
 export const modalAnimation = {
   initial: {
     opacity: 0,

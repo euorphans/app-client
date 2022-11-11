@@ -1,4 +1,4 @@
-import { RoleInterface } from '../models/interfaces/Role.interface';
+import { RoleInterface } from '../types';
 
 export const SortRoles = (array: any, setRoles: any, setPerms: any) => {
   const perms: Array<any> = [];

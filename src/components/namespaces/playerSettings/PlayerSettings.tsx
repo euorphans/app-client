@@ -7,8 +7,8 @@ import {
   AddImageIcon,
   DiscordIcon,
   DotsIcon,
-  StarBackgroundIcon,
-  StarIcon,
+  PremiumBackgroundBlack,
+  PremiumBackgroundGradient,
   VkIcon,
   YouTubeIcon
 } from '../../icons/Icons';
@@ -336,7 +336,7 @@ export namespace PlayerSettings {
                       <div className={style.buttons}>
                         <Switch state={{ value: switchState, setHandler: setSwitchState }} />
                         <Button styles={{ width: '40px', height: '40px' }}>
-                          <DotsIcon />
+                          <DotsIcon width={24} height={24} />
                         </Button>
                       </div>
                     </div>

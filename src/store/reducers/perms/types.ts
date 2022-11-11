@@ -1,5 +1,3 @@
-import { UserInterface } from '../../../models/interfaces/User.interface';
-
 export interface PermsState {
   perms: Array<string>;
   roles: Array<string>;

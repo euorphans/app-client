@@ -5,11 +5,11 @@ import MasterCardIcon from '../static/images/payment/logo/MasterCard.svg';
 import QIWIIcon from '../static/images/payment/logo/QIWI.svg';
 import SBPIcon from '../static/images/payment/logo/SBP.svg';
 import style from '../components/namespaces/subscription/Subscription.module.scss';
-import { StarIcon } from '../components/icons/Icons';
+import { PremiumBackgroundGradient } from '../components/icons/Icons';
 import { Link } from 'react-router-dom';
-import { UserInterface } from '../models/interfaces/User.interface';
 import { Avatar } from '../components/ui/avatar/Avatar';
 import sidebarStyle from '../components/sideBar/Sidebar.module.scss';
+import { UserInterface } from '../types';
 
 export type Items = Array<{
   title?: string;
@@ -497,7 +497,7 @@ export const pickSelection: ButtonsSliderType = [
           alignItems: 'center',
           gap: 'var(--space-2)'
         }}>
-        <StarIcon width={15} height={15} />
+        <PremiumBackgroundGradient width={15} height={15} />
         <span style={{ color: 'var(--black100)' }}>Премиум</span>
       </button>
     ),

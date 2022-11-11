@@ -1,10 +1,10 @@
 import style from './Avatar.module.scss';
 import React, { FC, useEffect } from 'react';
-import { StarIcon } from '../../icons/Icons';
+import { PremiumBackgroundGradient } from '../../icons/Icons';
 import { config } from '../../../config';
 import axios, { AxiosResponse } from 'axios';
 import { SortRoles } from '../../../utils/SortRoles';
-import { ComponentInterface } from '../../../models/interfaces/Component.interface';
+import { ComponentInterface } from '../../../types';
 
 interface Avatar extends ComponentInterface {
   username: string | undefined;
@@ -45,9 +45,9 @@ export const Avatar: FC<Avatar> = ({
         src={`https://skin.vimeworld.com/head/${username}.png`}
         alt="avatar"
       />
-      {perms.includes('premium_plus.icon') ? (
+      {!perms.includes('premium_plus.icon') ? (
         <div className={style.icon}>
-          <StarIcon width={widthPremium} height={heightPremium} />
+          <PremiumBackgroundGradient width={widthPremium} height={heightPremium} />
         </div>
       ) : null}
     </div>

@@ -1,11 +1,9 @@
 // @ts-ignore
 import style from './Button.module.scss';
-import React, { FC, MouseEventHandler } from 'react';
-import { ComponentInterface } from '../../../models/interfaces/Component.interface';
+import React, { FC } from 'react';
+import { ComponentInterface } from '../../../types';
 
-type ButtonI = ComponentInterface;
-
-export const Button: FC<ButtonI> = ({ children, styles, onClick }) => {
+export const Button: FC<ComponentInterface> = ({ children, styles, onClick }) => {
   return (
     <button className={style.button} style={styles} onClick={onClick}>
       {children}

@@ -26,9 +26,7 @@ export const Preloader: FC<PreloaderI> = ({ query, children, state }) => {
 
   useEffect(() => {
     if (state.value.success) {
-      layout.footer.state.set(true);
     } else {
-      layout.footer.state.set(false);
       if (state.value.code == 'ECONNABORTED') {
         setTimeout(() => {
           window.location.reload();
@@ -38,7 +36,7 @@ export const Preloader: FC<PreloaderI> = ({ query, children, state }) => {
   }, [state.value]);
 
   return state.value.error ? (
-    <NotFound.Body title={`${state.value.error.code}xx`} subTitle={state.value.error.message} />
+    <NotFound.Body title={`${state.value.error.code}xx`} description={state.value.error.message} />
   ) : state.value?.user ? (
     <>{children}</>
   ) : (

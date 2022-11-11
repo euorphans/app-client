@@ -1,9 +1,6 @@
 import { PermsActionEnum, SetPermsAction, SetRolesAction } from './types';
-import { UserInterface } from '../../../models/interfaces/User.interface';
 import { AppDispatch } from '../../index';
-import axios, { AxiosResponse } from 'axios';
-import UserService from '../../../services/UserService';
-import { config } from '../../../config';
+import { UserInterface } from '../../../types';
 
 export const PermsActionCreators = {
   setPerms: (perms: Array<string>): SetPermsAction => ({

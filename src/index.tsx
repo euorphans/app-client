@@ -10,7 +10,7 @@ import axios, { AxiosResponse } from 'axios';
 import { config } from './config';
 import { useActions } from './hooks/useActions';
 import { AuthActionCreators } from './store/reducers/auth/action-creators';
-import { UserInterface } from './models/interfaces/User.interface';
+import { UserInterface } from './types';
 
 const rootElement = document.querySelector('.app');
 

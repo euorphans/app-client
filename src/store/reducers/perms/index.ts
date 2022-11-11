@@ -1,5 +1,4 @@
 import { PermsAction, PermsActionEnum, PermsState } from './types';
-import { UserInterface } from '../../../models/interfaces/User.interface';
 
 const initialState: PermsState = {
   perms: [],

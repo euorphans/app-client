@@ -49,7 +49,7 @@ export const Forbidden = () => {
     <div style={{ minHeight: 'calc(100vh - 321px)' }}>
       <NotFound.Body
         title={'403'}
-        subTitle={'У Вас недостаточно прав для доступа к данной странице'}
+        description={'У Вас недостаточно прав для доступа к данной странице'}
       />
     </div>
   );
