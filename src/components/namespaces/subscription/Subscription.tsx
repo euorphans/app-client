@@ -66,7 +66,6 @@ export namespace Subscription {
   export const AnimatedWallpaper = () => {
     return (
       <div className={style.animatedWallpaperWrapper}>
-        <div className={style.number}>Уникальность 100%</div>
         <div className={style.cover}>
           <div className={style.coverImageButtonWrapper}>
             <div className={style.imageButton}>
@@ -77,7 +76,7 @@ export namespace Subscription {
           </div>
           <div className={style.coverAvatar}>
             <Avatar
-              username={'Orphans'}
+              username={'k1arov'}
               widthPremium={30}
               heightPremium={30}
               styles={{ margin: '-5px' }}
@@ -95,37 +94,46 @@ export namespace Subscription {
   };
 
   export const ExclusiveIcon = () => {
+    const { scrollYProgress } = useViewportScroll();
+    const scale = useTransform(scrollYProgress, [0, 0.4], [0.2, 1]);
+
     return (
-      <motion.div>
-        <div className={style.exclusiveIconWrapper}>
-          <div className={style.number}>Уникальность 100%</div>
-          <div className={style.exclusiveIcon}>
-            <ReactSkinview3d
-              skinUrl={`https://skin.vimeworld.com/raw/skin/Orphans.png`}
-              capeUrl={`https://skin.vimeworld.com/raw/cape/Orphans.png`}
-              height="650"
-              width="350"
-            />
-            <div className={style.information}>
-              <div className={style.avatarTitle}>
-                <motion.div whileHover={{ scale: 1.2 }} className={style.avatar}>
-                  <Avatar
-                    username={`Orphans`}
-                    widthPremium={40}
-                    heightPremium={40}
-                    styles={{ width: '100%', height: '100%', padding: '4px' }}
-                  />
-                </motion.div>
-                <span className={style.title}>
-                  Эксклюзивный значок
-                  <br /> в игре и на сайте
-                </span>
-              </div>
-              <span className={style.description}>
-                Включить или выключить его
-                <br /> можно в настройках профиля
+      <motion.div
+        className={style.exclusiveIconWrapper}
+        style={{ scale, transition: 'var(--transition15)' }}>
+        <motion.div
+          style={{
+            scaleY: scrollYProgress,
+            transition: 'var(--transition15)'
+          }}
+        />
+        <div className={style.number}>Уникальность 100%</div>
+        <div className={style.exclusiveIcon}>
+          <ReactSkinview3d
+            skinUrl={`https://skin.vimeworld.com/raw/skin/Orphans.png`}
+            capeUrl={`https://skin.vimeworld.com/raw/cape/Orphans.png`}
+            height="550"
+            width="250"
+          />
+          <div className={style.information}>
+            <div className={style.avatarTitle}>
+              <motion.div whileHover={{ scale: 1.2 }} className={style.avatar}>
+                <Avatar
+                  username={`Orphans`}
+                  widthPremium={40}
+                  heightPremium={40}
+                  styles={{ width: '100%', height: '100%', padding: '4px' }}
+                />
+              </motion.div>
+              <span className={style.title}>
+                Эксклюзивный значок
+                <br /> в игре и на сайте
               </span>
             </div>
+            <span className={style.description}>
+              Включить или выключить его
+              <br /> можно в настройках профиля
+            </span>
           </div>
         </div>
       </motion.div>
