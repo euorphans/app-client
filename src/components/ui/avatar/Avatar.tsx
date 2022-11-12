@@ -39,7 +39,7 @@ export const Avatar: FC<Avatar> = ({
     <div className={style.wrapper}>
       <img
         style={{
-          borderRadius: 'var(--radii-round)',
+          borderRadius: '100%',
           ...styles
         }}
         src={`https://skin.vimeworld.com/head/${username}.png`}

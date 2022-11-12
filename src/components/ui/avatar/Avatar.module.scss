@@ -1,8 +1,11 @@
 .wrapper {
   display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
 
   img {
+    user-select: none !important;
     background-color: rgba(22, 22, 26, 0.03);
   }
 
