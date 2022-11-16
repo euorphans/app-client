@@ -30,6 +30,22 @@ export const SearchIcon: FC<Icon> = ({ viewBox, fill, height, width }) => {
   );
 };
 
+export const CrownIcon: FC<Icon> = ({ viewBox, fill, height, width }) => {
+  return (
+    <div style={{ display: 'flex', width: width, height: height }}>
+      <svg
+        viewBox={viewBox ? viewBox : '0 0 24 24'}
+        fill={fill ? fill : 'none'}
+        width={width ? width : 24}
+        height={height ? height : 24}
+        xmlns="http://www.w3.org/2000/svg"
+        style={{ fill: fill, transform: 'msFilter' }}>
+        <path d="m21 2-5 5-4-5-4 5-5-5v13h18zM5 21h14a2 2 0 0 0 2-2v-2H3v2a2 2 0 0 0 2 2z"></path>
+      </svg>
+    </div>
+  );
+};
+
 export const ArrowIcon: FC<Icon> = ({ viewBox, fill, height, width }) => {
   return (
     <div style={{ display: 'flex', width: width, height: height }}>

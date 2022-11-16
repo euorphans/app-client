@@ -25,10 +25,6 @@ export const ButtonsSlider: FC<ButtonsSliderI> = ({ styles, items, onStateChange
     }
   }, []);
 
-  console.log(width, matches);
-
-  console.log(state, items.length);
-
   return (
     <div
       className={style.buttonsSlider}
@@ -61,10 +57,9 @@ export const ButtonsSlider: FC<ButtonsSliderI> = ({ styles, items, onStateChange
                   ? (state * width) / items.length - 4
                   : state * 170
               }px)`,
-          width: matches ? '97.6%' : width / items.length,
-          marginLeft: matches ? '4px' : '0',
+          width: matches ? '100%' : width / items.length,
           position: 'absolute',
-          height: matches ? '40px' : styles.height ? '85%' : '60px',
+          height: matches ? '40px' : styles.height ? '84%' : '60px',
           transition: 'all 0.15s ease-in-out 0s',
           borderRadius: '14px',
           background: 'rgb(255, 255, 255) none repeat scroll 0 0'

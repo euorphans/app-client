@@ -144,11 +144,11 @@ export namespace Match {
                   <Avatar
                     widthPremium={14}
                     heightPremium={14}
-                    username={'Orphans'}
+                    username={'wassty'}
                     styles={{ width: '40px', height: '40px' }}
                   />
                 </button>
-                <span className={style.username}>Orphans</span>
+                <span className={style.username}>wassty</span>
               </div>
               <div className={style.executionInfo}>
                 <div className={style.executionInfoLeft}>
@@ -183,11 +183,11 @@ export namespace Match {
                   <Avatar
                     widthPremium={14}
                     heightPremium={14}
-                    username={'_d4ckiller'}
+                    username={'Erelima'}
                     styles={{ width: '40px', height: '40px' }}
                   />
                 </button>
-                <span className={style.username}>_d4ckiller</span>
+                <span className={style.username}>Erelima</span>
               </div>
               <div className={style.executionInfo}>
                 <div className={style.executionInfoLeft}>
@@ -210,6 +210,45 @@ export namespace Match {
                     </div>
                     <div className={style.executionInfoRightDescriptionItem}>
                       <span className={style.text}>0,33</span>
+                      <span className={style.title}>K/D</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={style.player}>
+              <div className={style.defaultInfo}>
+                <button className={style.avatarButton}>
+                  <Avatar
+                    widthPremium={14}
+                    heightPremium={14}
+                    username={'Orphans'}
+                    styles={{ width: '40px', height: '40px' }}
+                  />
+                </button>
+                <span className={style.username}>Orphans</span>
+              </div>
+              <div className={style.executionInfo}>
+                <div className={style.executionInfoLeft}>
+                  <div className={style.executionInfoLeftTitle}>Всего</div>
+                  <div className={style.executionInfoLeftDescription}>
+                    <span className={style.text}>9</span>
+                    <span className={style.title}>Матчи</span>
+                  </div>
+                </div>
+                <div className={style.executionInfoRight}>
+                  <div className={style.executionInfoRightTitle}>Последние 20 матчей</div>
+                  <div className={style.executionInfoRightDescription}>
+                    <div className={style.executionInfoRightDescriptionItem}>
+                      <span className={style.text}>73%</span>
+                      <span className={style.title}>Побед</span>
+                    </div>
+                    <div className={style.executionInfoRightDescriptionItem}>
+                      <span className={style.text}>10</span>
+                      <span className={style.title}>Убийств</span>
+                    </div>
+                    <div className={style.executionInfoRightDescriptionItem}>
+                      <span className={style.text}>0,54</span>
                       <span className={style.title}>K/D</span>
                     </div>
                   </div>

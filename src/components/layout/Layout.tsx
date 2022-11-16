@@ -16,7 +16,7 @@ export const Layout: FC<Layout> = ({ children, useFooter, useContainer, useNavba
   return (
     <>
       {useNavbar && <Navbar items={NavbarItems} />}
-      {useContainer && <Container>{children}</Container>}
+      {useContainer ? <Container>{children}</Container> : <>{children}</>}
       {useFooter.state && <FooterLayout topPeace={useFooter.topPeace} />}
 
       <Toaster position={'bottom-right'} reverseOrder={false} />

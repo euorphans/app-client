@@ -493,6 +493,7 @@ export const pickSelection: ButtonsSliderType = [
           width: '100%',
           height: '100%',
           display: 'flex',
+          padding: '10px 10px, 0',
           flexDirection: 'row',
           alignItems: 'center',
           gap: 'var(--space-2)'
@@ -509,6 +510,7 @@ export const pickSelection: ButtonsSliderType = [
         style={{
           width: '100%',
           height: '100%',
+          padding: '10px 10px, 0',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center'

@@ -16,6 +16,7 @@ export const HomePage: FC = () => {
     window.scrollTo(0, 0);
     layout.footer.topPeace.set(true);
     layout.footer.state.set(true);
+    layout.container.set(true);
   }, []);
 
   return (
